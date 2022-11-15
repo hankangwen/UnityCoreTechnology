@@ -8,7 +8,7 @@
 //------------------------------------------------------------------------------
 
 // Generated from: common.proto
-namespace common
+namespace GamePb
 {
   [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"msgcharinfo")]
   public partial class msgcharinfo : global::ProtoBuf.IExtensible

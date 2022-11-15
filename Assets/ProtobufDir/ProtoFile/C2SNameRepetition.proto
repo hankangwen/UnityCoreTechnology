@@ -1,0 +1,9 @@
+package GamePb;
+import "common.proto";
+
+message C2SNameRepetition
+{
+  optional msgcharinfo charinfo = 1;   //创建角色
+  optional uint32 mapid = 2;
+  optional uint32 cityid = 3;
+};

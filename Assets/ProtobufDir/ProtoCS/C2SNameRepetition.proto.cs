@@ -7,20 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using common;
 // Generated from: C2SNameRepetition.proto
 // Note: requires additional types generated from: common.proto
-namespace clientmsg
+namespace GamePb
 {
   [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"C2SNameRepetition")]
   public partial class C2SNameRepetition : global::ProtoBuf.IExtensible
   {
     public C2SNameRepetition() {}
     
-    private msgcharinfo _charinfo = null;
+    private GamePb.msgcharinfo _charinfo = null;
     [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"charinfo", DataFormat = global::ProtoBuf.DataFormat.Default)]
     [global::System.ComponentModel.DefaultValue(null)]
-    public msgcharinfo charinfo
+    public GamePb.msgcharinfo charinfo
     {
       get { return _charinfo; }
       set { _charinfo = value; }

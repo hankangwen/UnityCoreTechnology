@@ -1,0 +1,12 @@
+package GamePb;
+
+message MsgMove{
+	optional int32 x = 1;
+	optional int32 y = 2;
+	optional int32 z = 3;
+}
+
+message LoginMsg{
+	optional string userName = 1 [default = "vincent"];
+	optional string userPsw = 2 [default = "123456"];
+}

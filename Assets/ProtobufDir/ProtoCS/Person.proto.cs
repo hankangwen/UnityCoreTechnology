@@ -8,7 +8,7 @@
 //------------------------------------------------------------------------------
 
 // Generated from: Person.proto
-namespace person
+namespace GamePb
 {
   [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"PhoneNumber")]
   public partial class PhoneNumber : global::ProtoBuf.IExtensible
@@ -22,10 +22,10 @@ namespace person
       get { return _number; }
       set { _number = value; }
     }
-    private person.PhoneType _type = person.PhoneType.HOME;
+    private GamePb.PhoneType _type = GamePb.PhoneType.HOME;
     [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"type", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(person.PhoneType.HOME)]
-    public person.PhoneType type
+    [global::System.ComponentModel.DefaultValue(GamePb.PhoneType.HOME)]
+    public GamePb.PhoneType type
     {
       get { return _type; }
       set { _type = value; }
@@ -62,9 +62,9 @@ namespace person
       get { return _email; }
       set { _email = value; }
     }
-    private readonly global::System.Collections.Generic.List<person.PhoneNumber> _phone = new global::System.Collections.Generic.List<person.PhoneNumber>();
+    private readonly global::System.Collections.Generic.List<GamePb.PhoneNumber> _phone = new global::System.Collections.Generic.List<GamePb.PhoneNumber>();
     [global::ProtoBuf.ProtoMember(4, Name=@"phone", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    public global::System.Collections.Generic.List<person.PhoneNumber> phone
+    public global::System.Collections.Generic.List<GamePb.PhoneNumber> phone
     {
       get { return _phone; }
     }
