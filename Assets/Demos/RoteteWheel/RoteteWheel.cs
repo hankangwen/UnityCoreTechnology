@@ -29,7 +29,7 @@ public class RoteteWheel : MonoBehaviour
 
         Vector3 normalVec = Vector3.Cross(curVec, _oldPos); //计算法向量
         float vecAngle = Vector2.Angle(curVec, _oldPos);    //计算两个向量的夹角
-        
+         
         //使用“右手定则”可知，当大拇指方向指向我们时，四指方向为逆时针方向
         //当大拇指方向远离我们时候，四指方向为顺时针方向
         //这里叉乘后的法向量平行于z轴，所以用法向量的z分量的正负判断法向量方向
