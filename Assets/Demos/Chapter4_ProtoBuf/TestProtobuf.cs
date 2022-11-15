@@ -21,9 +21,10 @@ public class TestProtobuf : MonoBehaviour
         // 获取协议名
         string protoName = loginMsg.ToString();
         // 解码
-        ProtoBuf.IExtensible m;
-        m = DecodeProto(protoName, bs_proto, 0, bs_proto.Length);
-        LoginMsg m2 = m as LoginMsg;
+        // ProtoBuf.IExtensible m;
+        // m = DecodeProto(protoName, bs_proto, 0, bs_proto.Length);
+        // LoginMsg m2 = m as LoginMsg;
+        LoginMsg m2 = DecodeProto<LoginMsg>(protoName, bs_proto, 0, bs_proto.Length);
         Debug.Log(m2.userName);
         Debug.Log(m2.userPsw);
     }
@@ -46,6 +47,16 @@ public class TestProtobuf : MonoBehaviour
             Type t = Type.GetType(protoName);
             var result = ProtoBuf.Serializer.NonGeneric.Deserialize(t, memory);
             return (ProtoBuf.IExtensible)result;
+        }
+    }
+    
+    public static T DecodeProto<T>(string protoName, byte[] bytes, int offset, int count)
+    {
+        using (var memory = new MemoryStream(bytes, offset, count))
+        {
+            Type t = Type.GetType(protoName);
+            var result = ProtoBuf.Serializer.NonGeneric.Deserialize(t, memory);
+            return (T)result;
         }
     }
 }
