@@ -181,7 +181,7 @@ namespace GameApp.Manager
         }
 
         #region GetConfig
-        public static GoodInfo FindArmorInfoFromId(int id) {
+        public static GoodInfo FindArmorInfoFromId(string id) {
             GoodInfo data = null;
             data = goodList.Find(x => x.Id == id);
             if (data == null) {

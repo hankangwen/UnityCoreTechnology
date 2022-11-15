@@ -3,7 +3,7 @@ namespace GameApp.Manager
     #region shop数据模型
     [DataPath(FileManager.dataFolder + "shop")]
     public class GoodInfo{
-        public int Id;
+        public string Id;
         public string Category;
         public string PropId;
         public string PropName;
