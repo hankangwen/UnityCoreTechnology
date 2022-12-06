@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 43333989}
   - component: {fileID: 43333991}
-  - component: {fileID: 43333990}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -155,14 +154,6 @@ Transform:
   m_Father: {fileID: 2037847580}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 48.31, y: 0, z: 0}
---- !u!81 &43333990
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 43333988}
-  m_Enabled: 1
 --- !u!20 &43333991
 Camera:
   m_ObjectHideFlags: 0
@@ -760,7 +751,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2037847580}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

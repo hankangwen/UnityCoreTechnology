@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ShadowScript : MonoBehaviour
@@ -11,8 +9,8 @@ public class ShadowScript : MonoBehaviour
     
     void Start()
     {
-        _plane = transform.Find("GameObject/Plane").GetComponent<MeshRenderer>();
-        Camera shadowCamera = transform.Find("GameObject/Camera").GetComponent<Camera>();
+        _plane = transform.Find("Shadow/Plane").GetComponent<MeshRenderer>();
+        Camera shadowCamera = transform.Find("Shadow/Camera").GetComponent<Camera>();
         
         if (!obj) obj = transform;
 
