@@ -4,12 +4,12 @@ public class ShadowScript : MonoBehaviour
 {
     public Transform obj;
 
-    private MeshRenderer _plane;
+    private GameObject _plane;
     private RenderTexture _rTexture;
     
     void Start()
     {
-        _plane = transform.Find("Shadow/Plane").GetComponent<MeshRenderer>();
+        _plane = transform.Find("Shadow/Plane").gameObject;
         Camera shadowCamera = transform.Find("Shadow/Camera").GetComponent<Camera>();
         
         if (!obj) obj = transform;
@@ -17,10 +17,12 @@ public class ShadowScript : MonoBehaviour
         _rTexture = new RenderTexture(256, 256, 0);
         _rTexture.name = Random.Range(0, 100).ToString();
         shadowCamera.targetTexture = _rTexture;
-    }
-    
-    void Update()
-    {
+        
         _plane.GetComponent<Renderer>().material.mainTexture = _rTexture;
     }
+    
+    // void Update()
+    // {
+    //     _plane.GetComponent<Renderer>().material.mainTexture = _rTexture;
+    // }
 }
